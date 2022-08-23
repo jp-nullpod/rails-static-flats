@@ -1,0 +1,12 @@
+<div>
+    <% if @flat %>
+        <h1><%= @flat["name"] %></h1>
+        <h2>💰<%= @flat["price"] %> <%= @flat["priceCurrency"]%></h2>
+        <%= image_tag @flat["imageUrl"], alt: @flat["name"], width: 500 %>
+    <% else %>
+        <h2>Flat not found</h2>
+    <% end %>
+</div>
+<div>
+    <%= link_to "Back to Home...", root_path %>
+</div>
